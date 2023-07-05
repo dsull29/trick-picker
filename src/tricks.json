@@ -1,0 +1,136 @@
+{
+  "poolTricks": [
+    {
+      "name": "Belly Flop",
+      "description": "The jumper lands flat on their stomach. Often unintentional and potentially painful.",
+      "type": "S"
+    },
+    {
+      "name": "Regular Swim",
+      "description": "Swim across the pool.",
+      "type": "R"
+    },
+    {
+      "name": "Doggy Paddle",
+      "description": "Doggy paddle swim across pool",
+      "type": "R"
+    },
+    {
+      "name": "Back swim",
+      "description": "Swim on your back across the pool",
+      "type": "R"
+    },
+    {
+      "name": "Underwater Swim",
+      "description": "Underwater swim across pool",
+      "type": "R"
+    },
+    {
+      "name": "Underwater Handstand",
+      "description": "Do a handstand underwater",
+      "type": "R"
+    },
+    {
+      "name": "Butterfly Handstand",
+      "description": "Do a handstand underwater with legs spread",
+      "type": "R"
+    },
+    {
+      "name": "Mystery",
+      "description": "Whatever you want",
+      "type": "S"
+    },
+    {
+      "name": "Swirl",
+      "description": "Swirl move",
+      "type": "R"
+    },
+    {
+      "name": "Twist",
+      "description": "Twist move",
+      "type": "R"
+    },
+    {
+      "name": "Surf",
+      "description": "Put a float under your feet and surf on it.",
+      "type": "T"
+    },
+    {
+      "name": "Ring Toss",
+      "description": "Toss rings onto a float",
+      "type": "S"
+    },
+    {
+      "name": "Cowboy Ride",
+      "description": "Ride a float like a cowboy. Yee-haw!",
+      "type": "T"
+    },
+    {
+      "name": "Back Float",
+      "description": "Float on your back",
+      "type": "T"
+    },
+    {
+      "name": "Dance Party",
+      "description": "Have a dance party in the pool",
+      "type": "T"
+    },
+    {
+      "name": "Spin",
+      "description": "Do a spin move",
+      "type": "R"
+    },
+    {
+      "name": "Side Cross",
+      "description": "Do the side cross move",
+      "type": "R"
+    },
+    {
+      "name": "Jumping Jacks",
+      "description": "Do jumping jacks",
+      "type": "R"
+    },
+    {
+      "name": "Get on a Float",
+      "description": "Climb on a Float",
+      "type": "S"
+    },
+    {
+      "name": "Whirlpool",
+      "description": "Make a whirlpool",
+      "type": "S"
+    },
+    {
+      "name": "Belly On Bottom",
+      "description": "Lay on your belly on the bottom of the pool",
+      "type": "T"
+    },
+    {
+      "name": "Floor is Lava",
+      "description": "The floor is lava! Get out of the pool!",
+      "type": "T"
+    }
+  ],
+  "trampolineTricks": [
+    {
+      "name": "Seat Drop",
+      "description": "A basic trick where the jumper bounces and lands in a sitting position with legs straight, then bounces back to their feet."
+    },
+    {
+      "name": "Swivel Hips",
+      "description": "From a seat drop, the jumper spins 180 degrees and lands in another seat drop facing the opposite direction."
+    },
+    {
+      "name": "Back Drop",
+      "description": "The jumper lands on the trampoline on their back and immediately rebounds back to their feet."
+    },
+    {
+      "name": "Front Flip",
+      "description": "A forward somersault."
+    },
+    {
+      "name": "Back Flip",
+      "description": "A backward somersault."
+    }
+  ]
+}
