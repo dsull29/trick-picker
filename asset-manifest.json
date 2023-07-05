@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/trick-picker/static/css/main.e6c13ad2.css",
+    "main.js": "/trick-picker/static/js/main.33f1bd12.js",
+    "index.html": "/trick-picker/index.html",
+    "main.e6c13ad2.css.map": "/trick-picker/static/css/main.e6c13ad2.css.map",
+    "main.33f1bd12.js.map": "/trick-picker/static/js/main.33f1bd12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.33f1bd12.js"
+  ]
+}
