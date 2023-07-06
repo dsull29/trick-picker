@@ -23,7 +23,7 @@ const TrickPicker = () => {
   };
 
   const pickCombo = () => {
-    const comboTricks = Array.from({ length: 5 }, () => getRandomTrick());
+    const comboTricks = Array.from({ length: 3 }, () => getRandomTrick());
     setTrick(null);
     setCombo(comboTricks);
   }

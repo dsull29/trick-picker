@@ -129,8 +129,48 @@
       "description": "A forward somersault."
     },
     {
-      "name": "Back Flip",
-      "description": "A backward somersault."
+      "name": "Jump forward",
+      "description": "Jump forward."
+    },
+    {
+      "name": "Ninja",
+      "description": "Do a ninja roll."
+    },
+    {
+      "name": "Knee Flip",
+      "description": "Jump to your knees and do a flip."
+    },
+    {
+      "name": "Spin",
+      "description": "Do a spin move."
+    },
+    {
+      "name": "No Hands Flip",
+      "description": "Do a flip without using your hands."
+    },
+    {
+      "name": "Split",
+      "description": "Do a split."
+    },
+    {
+      "name": "Run in Circle",
+      "description": "Run in a circle."
+    },
+    {
+      "name": "Play Dead",
+      "description": "Play dead."
+    },
+    {
+      "name": "Car Crash",
+      "description": "Do a car crash."
+    },
+    {
+      "name": "Rock Drop",
+      "description": "It's like a cannonball"
+    },
+    {
+      "name": "Knee Drop",
+      "description": "Jump to your knees."
     }
   ]
 }
