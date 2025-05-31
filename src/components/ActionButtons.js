@@ -1,23 +1,24 @@
 // src/components/ActionButtons.js
 import React from 'react';
-import Box from '@mui/material/Box'; // Box will be our flex container
+import Box from '@mui/material/Box';
 import CasinoIcon from '@mui/icons-material/Casino';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
-import { StyledActionButton } from './TrickPicker.styles'; // Import styled button
-
-// We are not using ButtonContainer from styles for this layout,
-// as we need a single flex container for side-by-side buttons.
+import { StyledActionButton } from './TrickPicker.styles';
 
 const ActionButtons = ({ onPickRandomTrick, onPickCombo }) => {
   return (
     <Box
       sx={{
         display: 'flex',
-        justifyContent: 'center', // Center the buttons if they don't fill the width
-        alignItems: 'center',
-        gap: 2, // Spacing between the buttons (theme.spacing(2))
-        mt: 3,  // Margin top for the group
-        mb: 3,  // Margin bottom for the group
+        flexDirection: { xs: 'column', sm: 'row' },
+        justifyContent: 'center',
+        alignItems: { xs: 'stretch', sm: 'center' },
+        gap: 2,
+        mt: 3,
+        mb: 3,
+        width: { xs: '90%', sm: 'auto' },
+        maxWidth: { sm: '600px' },
+        mx: { xs: 'auto', sm: 0 },
       }}
     >
       <StyledActionButton
@@ -25,6 +26,7 @@ const ActionButtons = ({ onPickRandomTrick, onPickCombo }) => {
         color="primary"
         onClick={onPickRandomTrick}
         startIcon={<CasinoIcon />}
+        sx={{ width: { xs: '100%', sm: 'auto' } }}
       >
         Single
       </StyledActionButton>
@@ -34,6 +36,7 @@ const ActionButtons = ({ onPickRandomTrick, onPickCombo }) => {
         color="secondary"
         onClick={onPickCombo}
         startIcon={<ViewComfyIcon />}
+        sx={{ width: { xs: '100%', sm: 'auto' } }}
       >
         Combo
       </StyledActionButton>
