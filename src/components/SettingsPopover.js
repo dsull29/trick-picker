@@ -9,6 +9,9 @@ import Typography from '@mui/material/Typography';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import TrickToggle from './TrickToggle';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import SuggestTrickForm from './SuggestTrickForm';
 
 const SettingsPopover = ({
   currentThemeMode,
@@ -18,6 +21,16 @@ const SettingsPopover = ({
   setCategory,
 }) => {
   const [settingsAnchorEl, setSettingsAnchorEl] = useState(null);
+  const [suggestFormOpen, setSuggestFormOpen] = useState(false);
+
+  const handleOpenSuggestForm = () => {
+    setSuggestFormOpen(true);
+    handleCloseSettings();
+  };
+
+  const handleCloseSuggestForm = () => {
+    setSuggestFormOpen(false);
+  };
 
   const handleOpenSettings = (event) => {
     setSettingsAnchorEl(event.currentTarget);
@@ -70,7 +83,6 @@ const SettingsPopover = ({
                 />
               }
               label={
-                // Removed flexGrow: 1 from Typography, justifyContent on parent handles it
                 <Typography>
                   {currentThemeMode === 'light' ? '☀️ Light' : '🌙 Dark'} Mode
                 </Typography>
@@ -89,9 +101,25 @@ const SettingsPopover = ({
               toggleTrickCategory={handleToggleTrickCategory}
               setCurrentCategory={setCategory}
             />
+          <Divider sx={{ my: 1 }} />
+
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={handleOpenSuggestForm}
+              fullWidth
+            >
+              Suggest a New Trick
+            </Button>
           </Stack>
         </Box>
       </Popover>
+
+      {/* Suggestion Form Dialog */}
+      <SuggestTrickForm
+        open={suggestFormOpen}
+        onClose={handleCloseSuggestForm}
+      />      
     </>
   );
 };
