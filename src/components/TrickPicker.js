@@ -1,15 +1,16 @@
-// components/TrickPicker.js
+// src/components/TrickPicker.js
 import React, { useState, useCallback, useEffect } from 'react';
 import tricksData from '../tricks.json';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import Switch from '@mui/material/Switch';
-import TrickToggle from './TrickToggle';
-import TrickCard from './TrickCard';
-import TrickComboCard from './TrickComboCard';
+
+import SettingsPopover from './SettingsPopover';
+import ActionButtons from './ActionButtons';
+// import TrickCard from './TrickCard'; // Remove old import
+// import TrickComboCard from './TrickComboCard'; // Remove old import
+import UnifiedTrickCard from './UnifiedTrickCard'; // Import the new unified card
+import { StyledTitle } from './TrickPicker.styles';
 
 const TrickPicker = ({ toggleThemeMode, currentThemeMode }) => {
   const [trick, setTrick] = useState(null);
@@ -28,9 +29,7 @@ const TrickPicker = ({ toggleThemeMode, currentThemeMode }) => {
 
   const getRandomTrick = useCallback(() => {
     const currentTricksForCategory = tricksData[category] || [];
-
     if (!currentTricksForCategory || currentTricksForCategory.length === 0) return null;
-
     const randomTrick = { ...currentTricksForCategory[Math.floor(Math.random() * currentTricksForCategory.length)] };
     if (randomTrick.type === 'R') {
       randomTrick.reps = Math.floor(Math.random() * 11) + 2;
@@ -59,45 +58,39 @@ const TrickPicker = ({ toggleThemeMode, currentThemeMode }) => {
   }, []);
 
   return (
-    <Container>
+    <Container sx={{ position: 'relative', pt: 8 }}>
+      <SettingsPopover
+        currentThemeMode={currentThemeMode}
+        toggleThemeMode={toggleThemeMode}
+        currentCategory={category}
+        handleToggleTrickCategory={handleToggleTrickCategory}
+        setCategory={setCategory}
+      />
+
       <Grid
         container
         direction="column"
+        justifyContent="center"
+        alignItems="center"
       >
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', width: '100%', p: 1 }}>
-          <Typography sx={{ mr: 1 }}>
-            {currentThemeMode === 'light' ? 'Light Mode' : 'Dark Mode'}
-          </Typography>
-          <Switch
-            checked={currentThemeMode === 'dark'}
-            onChange={toggleThemeMode}
-            inputProps={{ 'aria-label': 'toggle theme' }}
-          />
-        </Box>
+        <StyledTitle variant="h2" component="h1" currentThemeMode={currentThemeMode}>
+          🤸 <Box component="span">Trick Picker</Box> 🌊
+        </StyledTitle>
 
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Box sx={{ m: 2, textAlign: 'center' }}>
-            <Typography variant="h2" gutterBottom>Trick Picker</Typography>
-            <TrickToggle
-              currentCategory={category}
-              toggleTrickCategory={handleToggleTrickCategory}
-              setCurrentCategory={setCategory} // Kept as TrickToggle might expect it
-            />
-            <Box sx={{ mb: 2, mt: 2 }}>
-              <Button variant="contained" color="primary" onClick={pickRandomTrick}>Pick a Trick</Button>
-            </Box>
-            <Box sx={{ mb: 2 }}>
-              <Button variant="contained" color="secondary" onClick={pickCombo}>Pick a Combo</Button>
-            </Box>
-            {trick && <TrickCard trick={trick} />}
-            {combo.length > 0 && combo.map((comboTrick, i) => <TrickComboCard key={i} trick={comboTrick} />)}
-          </Box>
-        </Grid>
+        <ActionButtons
+          onPickRandomTrick={pickRandomTrick}
+          onPickCombo={pickCombo}
+        />
+
+        <Box sx={{ mt: 2, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          {/* Use UnifiedTrickCard for single trick */}
+          {trick && <UnifiedTrickCard trick={trick} isComboItem={false} />}
+
+          {/* Use UnifiedTrickCard for combo tricks */}
+          {combo.length > 0 && combo.map((comboTrick, i) => (
+            <UnifiedTrickCard key={i} trick={comboTrick} isComboItem={true} />
+          ))}
+        </Box>
       </Grid>
     </Container>
   );
