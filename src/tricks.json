@@ -206,6 +206,26 @@
     },
     { "name": "Sit, Twirl, and Plank",
       "description": "Sit on the trampoline, spin around in a circle, and then transition into a plank position while bouncing slightly."
+    },
+    {
+      "name": "Statue",
+      "description": "Jump and freeze in a pose, like a statue, before landing."
+    },
+    {
+      "name": "Around the Wold",
+      "description": "Running around in a circle while singing 'Around the World'."
+    },
+    {
+      "name": "Popcorn",
+      "description": "Jump and bounce around like popcorn popping."
+    },
+    {
+      "name": "Jumping Jacks",
+      "description": "Do jumping jacks while bouncing on the trampoline."
+    },
+    {
+      "name": "Strike a Pose",
+      "description": "Jump and strike a pose in mid-air before landing."
     }
   ]
 }
