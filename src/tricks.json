@@ -179,6 +179,33 @@
     {
       "name": "Air Kick",
       "description": "Jump and do a kick"
+    },
+    {
+      "name": "Pin the Tail",
+      "description": "Pretend to pin the tail on a donkey by jumping and reaching out with your hand."
+    },
+    {
+      "name": "N.S.E.W.",
+      "description": "Jump and point in the four cardinal directions: North, South, East, and West."
+    },
+    {
+      "name": "Fall Game",
+      "description": "Jump and fall in a controlled manner, trying to land on your feet."
+    },
+    {
+      "name": "Slipping Split",
+      "description": "Jump and do a split, but land on your back."
+    },
+    {
+      "name": "Split and Twirl",
+      "description": "Jump and do a split, then twirl around in the air before landing."
+    },
+    {
+      "name": "Sit and Twirl",
+      "description": "Sit on the trampoline and spin around in a circle while bouncing slightly."
+    },
+    { "name": "Sit, Twirl, and Plank",
+      "description": "Sit on the trampoline, spin around in a circle, and then transition into a plank position while bouncing slightly."
     }
   ]
 }
